@@ -11,6 +11,17 @@ h1{
     font-family: "Alone";
     font-size: 80px;
     font-weight: lighter;
+    animation: Expand 1s forwards, UpNoShadow 1s 0.9s forwards;
+    transform: scale(0.01);
+    transition: 0.3s;
+}
+
+a:link#links,a:visited#links,a:hover#links{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    right: 300px;
 }
 
 #recipe{
@@ -33,6 +44,16 @@ h1{
     height: 140px;
     padding: 10px;
     position: relative;
+    text-align: center;
+}
+
+#divider{
+    display: grid;
+    width: 700px;
+    height: 20px;
+    text-align: left;
+    background-color: #92817a;
+    margin: auto;
 }
 
 #middle{
@@ -51,15 +72,6 @@ h1{
 #ingredients, #instructions, #nutrition{
     display: grid;
     width: 700px;
-    text-align: left;
-    background-color: #92817a;
-    margin: auto;
-}
-
-#divider{
-    display: grid;
-    width: 700px;
-    height: 20px;
     text-align: left;
     background-color: #92817a;
     margin: auto;
@@ -101,6 +113,37 @@ h1{
     color:white;
 }
 
+.recipe-name{
+    position: relative;
+    top: -70px;
+    z-index: 10;
+    text-shadow: 3px 2px black;
+}
+
+.recipe-pic{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.imageSmall{
+    object-fit: cover;
+    position: absolute;
+    z-index: 2;
+    top: 2em;
+    left: 7px;
+    width: 680px;
+    height: 100px;
+    border-radius: 0%;
+    border: 0.2em solid #f1dabf;
+    background: linear-gradient(to bottom, #f1dabf, black);
+    background-size: cover;
+    background-origin: border-box;
+    box-shadow: 0 0 0px black;
+    animation: FadeIn 2s forwards, Up 1s 0.9s forwards;
+    transition: 0.3s;
+}
+
 .line{
     width: 700px;
     z-index: 20;
@@ -120,66 +163,22 @@ h1{
     text-align: center;
 }
 
-.recipe-pic{
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.recipe-name{
-    position: relative;
-    top: -70px;
-    z-index: 10;
-    text-shadow: 3px 2px black;
-}
-
-.imageSmall{
-    object-fit: cover;
-    position: absolute;
-    z-index: 2;
-    top: 2em;
-    left: 7px;
-    width: 680px;
-    height: 100px;
-    border-radius: 0%;
-    border: 0.2em solid #f1dabf;
-    background: linear-gradient(to bottom, #f1dabf, black);
-    background-size: cover;
-    background-origin: border-box;
-    box-shadow: 0 0 0px black;
-    animation: expand 1s forwards, Up 1s 0.9s forwards;
-    transform: scale(0.01);
-    transition: 0.3s;
-}
-
-
-@keyframes expand {
+@keyframes Expand {
     from {transform: scale(0.01)} to {transform: scale(1)};
 }
-@keyframes Down {
-    100% {top: 2em};
-}
+
 @keyframes Up {
     100% {top: 2em};
     from {box-shadow: 0 0 0px black} to {box-shadow: 0 0 1.2em black};
 }
-@keyframes appear {
-    from {opacity: 0} to {opacity: 1};
-    from {margin-top: 0em} to {margin-top: 6em};
 
+@keyframes UpNoShadow {
+    100% {top: 2em};
 }
-@keyframes extend {
-    from {width: 0%} to {width: 70%};
-}
-@keyframes subExtend{
-    from  {width: 0%} to {width: 50%};
-}
-@keyframes recipeAppear{
-    from {margin-top: 1.5em} to {margin-top: 3.1em};
+
+@keyframes FadeIn {
     from {opacity: 0} to {opacity: 1};
-}
-@keyframes fadeIn {
-    from {opacity: 0} to {opacity: 1};
+
 }
 
 @font-face {
