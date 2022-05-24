@@ -24,6 +24,14 @@ a:link#links,a:visited#links,a:hover#links{
     right: 300px;
 }
 
+#main{
+    text-align: center;
+    background-color: #362417;
+    color: #fffbff;
+    height: 100vh;
+    padding: 20px 0px;
+}
+
 #recipe{
     text-align: center;
     background-color: #362417;
@@ -113,6 +121,19 @@ a:link#links,a:visited#links,a:hover#links{
     color:white;
 }
 
+#wrapper{
+    display: inline-grid;
+    margin: auto;
+}
+
+.topLinks, .bottomLinks{
+    display: flex;
+    justify-content:space-between;
+    width: 500px;
+    height: 180px;
+    margin-left: 20px;
+}
+
 .recipe-name{
     position: relative;
     top: -70px;
@@ -124,6 +145,22 @@ a:link#links,a:visited#links,a:hover#links{
     position: absolute;
     top: 0;
     left: 0;
+}
+
+.imageMain{
+    object-fit: cover;
+    position: absolute;
+    z-index: 2;
+    width: 150px;
+    height: 150px;
+    border-radius: 30%;
+    border: 0.2em solid #f1dabf;
+    background: linear-gradient(to bottom, #f1dabf, black);
+    background-size: cover;
+    background-origin: border-box;
+    box-shadow: 0 0 1.2em black;
+    animation: FadeIn 2s forwards;
+    transition: 0.3s;
 }
 
 .imageSmall{

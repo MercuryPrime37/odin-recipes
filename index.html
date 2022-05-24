@@ -4,15 +4,29 @@
     <head>
         <meta charset="utf-8">
         <title>Odin Recipes</title>
-        <link rel="stylesheet" type="text/css" href="../stylesheet.css">
+        <link rel="stylesheet" type="text/css" href="stylesheet.css">
     </head>
     <body>
-        <h1>Odin Recipes</h1>
-        <a href="recipes/stroganoff.html">Beef Stroganoff</a>
-        <a href="recipes/americanGoulash.html">American Goulash</a>
-        <a href="recipes/cheeseburgerMacaroni.html">Cheeseburger Macaroni</a>
-        <a href="recipes/peppermintBrownieCookies.html">Peppermint Brownie Cookies</a>
-        <a href="recipes/creamyGarlicSalmon.html">Creamy Garlic Salmon</a>
-        <a href="recipes/cajunTwiceBakedPotatoes.html">Cajun Twice Baked Potatoes</a>
+        <div id="main">
+            <div id="recipe-container">
+                <h1>Odin Recipes</h1>
+                <h2 id="heading2">Select a recipe!</h2>
+                <div class="topLinks">
+                    <a id="Stroganoff" href="recipes/stroganoff.html"><img class="imageMain" src="recipes/BeefStroganoff.jpg"></a>
+                    <a id="Goulash" href="recipes/americanGoulash.html"><img class="imageMain" src="recipes/AmericanGoulash.jpg"></a>
+                    <a id="Cheeseburger" href="recipes/cheeseburgerMacaroni.html"><img class="imageMain" src="recipes/CheeseburgerMacaroni.jpg"></a>
+                </div>
+                <div class="bottomLinks">
+                    <a id="Peppermint" href="recipes/peppermintBrownieCookies.html"><img class="imageMain" src="recipes/PeppermintBrownieCookies.jpg"></a>
+                    <a id="Salmon" href="recipes/creamyGarlicSalmon.html"><img class="imageMain" src="recipes/CreamyGarlicSalmon.jpg"></a>
+                    <a id="Potatoes" href="recipes/cajunTwiceBakedPotatoes.html"><img class="imageMain" src="recipes/CajunTwiceBakedPotatoes.jpg"></a>
+                </div>
+                <div>
+                    <p>The Odin Project</p>
+                    <p>Recipe Project: by Zachary Niehaus</p>
+                </div>
+            </div>    
+        </div>
+        <script src="script.js"></script>           
     </body>
 </html>
